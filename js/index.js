@@ -30,7 +30,10 @@ $(() =>{
                 flag.html(imageFlag);
                 console.log(response);
             },
-         
+            error: () => {
+                preLoader.css({display: 'none'});
+                alert('Такая страна не существует!')
+            }
         });            
     });
 
